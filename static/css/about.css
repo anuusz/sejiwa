@@ -1,0 +1,344 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #8AA6B1;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  height: 90px;
+  width: 180px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav a:hover {
+  background-color: #6f8b96;
+  border-radius: 25px;
+}
+
+.navbar {
+  background-color: #8aa6b1;
+}
+
+.navbar a {
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: #8AA6B1;
+  border-color: #8AA6B1;
+}
+
+.btn-primary:hover {
+  background-color: #6f8b96;
+  border-color: #6f8b96;
+}
+
+.main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Menambahkan flex-wrap untuk memisahkan konten pada perangkat kecil */
+}
+
+.main h1 {
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.main p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 600px; /* Menambahkan max-width agar teks tidak terlalu lebar */
+    margin: 10px 0;
+}
+
+.main img {
+    width: 100%;
+    max-width: 400px; /* Pastikan gambar tidak terlalu besar pada layar besar */
+    margin-top: 20px;
+    object-fit: cover; /* Menjaga gambar tetap proporsional */
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+.main {
+    flex-direction: column; /* Ubah layout menjadi kolom pada layar kecil */
+    align-items: center; /* Menjaga konten tetap terpusat */
+}
+
+/* .main h2 {
+    font-size: 60px; 
+    font-weight: bold;
+} */
+
+.main p {
+    font-size: 14px; /* Mengurangi ukuran font agar nyaman dibaca di perangkat kecil */
+    text-align: center; /* Meratakan teks di layar kecil */
+    max-width: 100%; /* Memastikan teks lebih rapat pada layar kecil */
+}
+
+.main img {
+    max-width: 100%; /* Gambar akan mengambil lebar 100% layar */
+    margin-top: 10px;
+}
+}
+
+.services {
+    background-color: #96c2d3;
+    padding: 40px 20px;
+    text-align: center;
+    /* width: 300px;
+    height: 200px; */
+    background: linear-gradient(to bottom, rgb(244, 244, 244), #8aa6b1);
+  
+    
+    
+}
+
+.services h2, .main h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(50, 57, 57);
+    margin-bottom: 20px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Agar kartu layanan bisa berpindah ke baris baru pada perangkat kecil */
+}
+
+.service-card {
+    background-color: #F4BFBF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    margin: 10px 0;
+    flex: 1; /* Memungkinkan kartu untuk mengambil ruang yang sama */
+    max-width: 220px; /* Menjaga ukuran kartu */
+}
+
+.service-card img {
+    width: 100%;
+    max-width: 100px; /* Menyempitkan gambar agar sesuai dengan ukuran kartu */
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+.services h2 {
+    font-size: 18px; /* Ukuran font untuk heading lebih kecil di perangkat kecil */
+}
+
+.service-cards {
+    justify-content: center;
+    gap: 15px;
+}
+
+.service-card {
+    width: 100%; /* Membuat kartu layanan mengisi seluruh lebar pada perangkat kecil */
+    max-width: 90%; /* Membatasi lebar maksimal kartu pada perangkat kecil */
+    margin: 10px 0;
+}
+
+.service-card img {
+    max-width: 80px; /* Menyesuaikan ukuran gambar agar lebih kecil di perangkat mobile */
+}
+
+.service-card p {
+    font-size: 12px; /* Mengurangi ukuran font untuk teks pada perangkat mobile */
+    text-align: center; /* Meratakan teks di bawah gambar */
+}
+}
+
+.contact {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact .text-content {
+  text-align: left;
+}
+
+.contact h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact button {
+  background-color: #8DA9C4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.contact img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.footer {
+  background-color: #8AA6B1;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer .footer-content div {
+  width: 230px;
+}
+
+.footer .footer-content h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer .footer-content p {
+  font-size: 14px;
+  margin: 0px 0;
+}
+
+.footer .footer-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  color: white;
+  margin: 0 15px;
+  font-size: 20px;
+}
+
+.modal-dialog {
+  max-width: 900px;  /* Maksimal lebar untuk desktop */
+  width: 300%;         /* Lebar 80% dari layar */
+  margin: 0 auto;     /* Menjaga modal tetap terpusat */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: row; /* Align content horizontally */
+}
+
+@media (max-width: 768px) {
+  .footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards,
+  .communication-cards,
+  .articles-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .communication-card,
+  .article-card {
+    width: 90%;
+  }
+  .modal-dialog {
+    max-width: 200%;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+  }
+  .modal-content {
+    height: 800px;    /* Tinggi modal lebih besar (800px) */
+    border-radius: 10px;
+  }
+
+  .left, .right {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left {
+      background-color: #FFDADA;
+      text-align: center;
+  }
+
+  .right {
+    padding-top: 40px; /* Menambahkan jarak di atas untuk kolom kanan */
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-dialog {
+    max-width: 100%; /* Modal mengambil lebar penuh */
+    margin-top: 20px;
+    margin: 0 auto;
+  }
+
+  .modal-content {
+    height: auto;  /* Tinggi otomatis sesuai konten */
+    display: block; /* Tidak perlu flexbox pada tampilan mobile */
+  }
+
+  .left, .right {
+    width: 100%;   /* Kolom menjadi penuh di perangkat mobile */
+    padding: 15px;
+  }
+
+  .right {
+    padding-top: 20px; /* Menyesuaikan padding untuk tampilan mobile */
+  }
+}

@@ -1,0 +1,108 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    text-align: center; /* Menjadikan teks secara default berada di tengah */
+}
+
+header {
+    background-color: #8AA6B1;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100px;
+}
+
+header img {
+    height: 70px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    /* font-weight: 700; */
+    /* font-size: 16px; */
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+nav a:hover {
+    background-color: #6f8b96;
+    /* border-radius: 25px; */
+}
+
+h1 {
+    text-align: center; /* Memastikan judul di tengah */
+    margin-top: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 20px auto; /* Memastikan form berada di tengah horizontal */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Semua elemen di dalam form-container berada di tengah */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Pertanyaan tetap rata kiri */
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: left; /* Membuat label di tengah */
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8AA6B1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #6f8b96;
+}
+
+.modal-dialog {
+    max-width: 900px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+        
+        .blog-container {
+            width: 60%;
+            max-height: 90vh;
+            overflow-y: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .blog-title {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .blog-content {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        
+        .blog-author {
+            font-size: 1em;
+            font-style: italic;
+            color: #888;
+        }
+        
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <h1 class="blog-title">{{ post.title }}</h1>
+        <div class="blog-content">{{ post.content|safe }}</div>
+        <p class="blog-author">Author: {{ post.author }}</p>
+        <p>Created at: {{ post.created_at }}</p>
+    <a href="{% url 'blog_list' %}">Back to Blog List</a>
+    </div>  
+</body>
+</html>

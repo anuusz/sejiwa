@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sejiwa</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+
+<body>
+  <header>
+    <img alt="Sejiwa Logo" src="{% static 'img/logosejiwa.png' %}"/>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">BERANDA</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">TENTANG</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://v20cw5h3mtt.typeform.com/to/Jdnw8buY">TES KESEHATAN MENTAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'blog_list' %}">BLOG</a></li>
+          </ul>
+          <a class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#loginForm">LOGIN</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="text-content">
+      <h2>SELAMAT DATANG DI SEJIWA</h2>
+      <p>
+        SEJIWA adalah website yang hadir untuk meningkatkan pemahaman tentang kesehatan mental. Dengan artikel edukatif dan infografis, kami juga menghadirkan alat penilaian yang interaktif sehingga pengguna bisa mengevaluasi kondisi kesehatan mental mereka.
+      </p>
+      <p>
+        Dengan SEJIWA kamu bisa mengenali tanda-tanda kesehatan dan mengakses layanan dari konselor profesional secara privat dan praktis dengan harga yang terjangkau. Kami juga menyediakan layanan teman rahasia yang akan menemani dan mendengarkan seluruh ceritamu.
+      </p>
+      <p>
+        Dapatkan konseling profesional maupun non-profesional kapan pun, dimana pun, hanya dengan sentuhan jari!
+      </p>
+    </div>
+    <img alt="Illustration of two people talking" src="{% static 'img/tentang.png' %}" />
+  </main>
+
+  <section class="services">
+    <h2>LAYANAN KAMI</h2>
+    <h2>SEJIWA siap untuk...</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <img alt="Video chat illustration"
+          src="https://storage.googleapis.com/a1aa/image/we2fiMjgegH13I28O5PJ3aNHaUIwiD5ujsQp8MiPSim4RCfOB.jpg" />
+        <p>Memberikan sesi konsultasi dan curhat tatap muka memalui video chat dengan nyaman</p>
+      </div>
+      <div class="service-card">
+        <img alt="Privacy illustration"
+          src="https://storage.googleapis.com/a1aa/image/U7u5L64ng0pqFRUgwsZWIDUQxvYsXenvcWWl6VF8gUrfIhvTA.jpg" />
+        <p>Menjaga dan menjamin privasi kamu</p>
+      </div>
+      <div class="service-card">
+        <img alt="Professionalism illustration"
+          src="https://storage.googleapis.com/a1aa/image/zHfVwEBwQvSCRSkePknIVtRJS05EUMGuTzzuqJYWA0s9IhvTA.jpg" />
+        <p>Menerapkan standar profesionalisme tertinggi demi kenyamanan kamu</p>
+      </div>
+      <div class="service-card">
+        <img alt="Best service illustration"
+          src="https://storage.googleapis.com/a1aa/image/tBjzVUMowKZDKVO0PEQAVgeBve0yTphUNCrZQ6JkbEe8RCfOB.jpg" />
+        <p>Mengutamakan kebutuhan kamu dan selalu memberikan pelayanan terbaik</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h4>PT. Sejiwa</h4>
+        <p>Gedung D Universitas Gunadarma</p>
+        <p>Jalan Margonda Raya No. 100</p>
+        <p>Telepon (WhatsApp): 086 5755 1234</p>
+        <p>Email: sejiwa@gmail.com</p>
+      </div>
+      <div>
+        <h4>Layanan Konsumen</h4>
+        <p><a href="#">Hubungi Kami</a></p>
+        <p><a href="#">FAQ</a></p>
+      </div>
+      <div>
+        <h4>Tautan Penting</h4>
+        <p><a href="#">Kebijakan Privasi</a></p>
+        <p><a href="#">Syarat dan Ketentuan</a></p>
+        <p><a href="#">Emergency Service</a></p>
+        <p><a href="#">Tentang Kami</a></p>
+        <p><a href="#">Bergabung dengan Sejiwa</a></p>
+      </div>
+      <div>
+        <h4>Ikuti Kami Disini</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <p>©SEJIWA, 2024. ALL RIGHTS RESERVED</p>
+  </footer>
+
+<!-- Login Form Modal -->
+<div class="modal fade" id="loginForm" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 900px;">
+    <div class="modal-content">
+      <!-- Left Section -->
+      <div class="left" style="background-color: #FFDADA; width: 50%; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="{% static 'img/logosejiwa.png' %}" alt="Logo" height="200" width="350"/>
+        <div class="quote" style="text-align: center; margin-top: 20px;">
+          <h2 style="color: #7D8CC4; font-size: 24px; margin: 0;">Quote of the Day</h2>
+          <p style="color: #4A4A4A; font-size: 24px; font-weight: bold; margin: 10px 0 0 0;">"What happens is not as important as how you react to what happens"</p>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right" style="background-color: #FFFFFF; width: 50%; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+        <div class="background-pattern" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://placehold.co/100x100?text=Pattern'); background-repeat: no-repeat; background-position: center; opacity: 0.1;"></div>
+        <div class="content" style="position: relative; z-index: 1; text-align: center;">
+          <h1 style="color: #4A4A4A; font-size: 24px; font-weight: bold;">HALO SOBAT JIWA</h1>
+          <p style="color: #4A4A4A; font-size: 14px;">Belum punya akun? <a href="#" onclick="showRegisterForm()" style="color: #7D8CC4;" data-bs-target="#registerForm">Daftar disini</a></p>
+
+          <!-- Email Input -->
+          <div class="form-group" style="margin: 20px 0; width: 95%; position: relative;">
+            <div class="input-icon" style="position: relative;">
+              <i class="fas fa-envelope" style="position: absolute; margin-left: 10px; margin-top: 18px; color: #C8E6C9;"></i>
+              <input type="email" placeholder="Email" style="width: 100%; padding: 15px; border: 2px solid #C8E6C9; border-radius: 5px; font-size: 14px; padding-left: 40px;"/>
+            </div>
+          </div>
+
+          <!-- Password Input -->
+          <div class="form-group" style="margin: 20px 0; width: 95%; position: relative;">
+            <div class="input-icon" style="position: relative;">
+              <i class="fas fa-lock" style="position: absolute; margin-left: 10px; margin-top: 18px; color: #C8E6C9;"></i>
+              <input type="password" placeholder="Password" style="width: 100%; padding: 15px; border: 2px solid #C8E6C9; border-radius: 5px; font-size: 14px; padding-left: 40px;"/>
+            </div>
+          </div>
+
+          <!-- Login Button -->
+          <button class="login-btn" style="background-color: #7D8CC4; color: #FFFFFF; border: none; padding: 10px 40px; border-radius: 5px; font-size: 16px; cursor: pointer;">Login</button>
+
+          <!-- Forgot Password Link -->
+          <p><a href="#" class="forgot-password" style="color: #7D8CC4; font-size: 14px; text-decoration: none;">Lupa password?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Register Form Modal -->
+<div class="modal fade" id="registerForm" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 900px;">
+    <div class="modal-content">
+
+      <!-- Left Section -->
+      <div class="left" style="background-color: #FFDADA; width: 50%; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="{% static 'img/logosejiwa.png' %}" alt="Logo" height="200" width="350"/>
+        <div class="quote" style="text-align: center; margin-top: 20px;">
+          <h2 style="color: #7D8CC4; font-size: 24px; margin: 0;">Quote of the Day</h2>
+          <p style="color: #4A4A4A; font-size: 24px; font-weight: bold; margin: 10px 0 0 0;">"What happens is not as important as how you react to what happens"</p>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right" style="background-color: #FFFFFF; width: 50%; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+        <div class="background-pattern" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://placehold.co/100x100?text=Pattern'); background-repeat: no-repeat; background-position: center; opacity: 0.1;"></div>
+        <div class="content" style="position: relative; z-index: 1; text-align: center;">
+          <h1 style="color: #4A4A4A; font-size: 24px; font-weight: bold;">HALO SOBAT JIWA</h1>
+          <p style="color: #4A4A4A; font-size: 14px;">Sudah punya akun? <a href="#" onclick="showLoginForm()" style="color: #7D8CC4;" data-bs-target="#loginForm">Login disini</a></p>
+
+          <!-- Username Input -->
+          <div class="form-group" style="margin: 20px 0; width: 95%; position: relative;">
+            <div class="input-icon" style="position: relative;">
+              <i class="fas fa-user" style="position: absolute; margin-left: 10px; margin-top: 18px; color: #C8E6C9;"></i>
+              <input type="text" placeholder="Username" style="width: 100%; padding: 15px; border: 2px solid #C8E6C9; border-radius: 5px; font-size: 14px; padding-left: 40px;"/>
+            </div>
+          </div>
+
+          <!-- Email Input -->
+          <div class="form-group" style="margin: 20px 0; width: 95%; position: relative;">
+            <div class="input-icon" style="position: relative;">
+              <i class="fas fa-envelope" style="position: absolute; margin-left: 10px; margin-top: 18px; color: #C8E6C9;"></i>
+              <input type="email" placeholder="Email" style="width: 100%; padding: 15px; border: 2px solid #C8E6C9; border-radius: 5px; font-size: 14px; padding-left: 40px;"/>
+            </div>
+          </div>
+
+          <!-- Password Input -->
+          <div class="form-group" style="margin: 20px 0; width: 95%; position: relative;">
+            <div class="input-icon" style="position: relative;">
+              <i class="fas fa-lock" style="position: absolute; margin-left: 10px; margin-top: 18px; color: #C8E6C9;"></i>
+              <input type="password" placeholder="Password" style="width: 100%; padding: 15px; border: 2px solid #C8E6C9; border-radius: 5px; font-size: 14px; padding-left: 40px;"/>
+            </div>
+          </div>
+
+          <!-- Checkbox Agreement -->
+          <div class="checkbox-group" style="margin: 20px 0; text-align: left; width: 100%;">
+            <input type="checkbox" id="terms" style="margin-right: 10px;"/>
+            <label for="terms" style="font-size: 14px;">Saya telah membaca, memahami, dan menyetujui <a href="#">Syarat dan Ketentuan</a> serta <a href="#">Kebijakan Privasi</a></label>
+          </div>
+
+          <!-- Register Button -->
+          <button class="register-btn" style="background-color: #7D8CC4; color: #FFFFFF; border: none; padding: 10px 40px; border-radius: 5px; font-size: 16px; cursor: pointer;">Daftar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showRegisterForm() {
+      var loginModal = new bootstrap.Modal(document.getElementById('loginForm'));
+      loginModal.hide();  // Close Login Modal
+
+      // Menunggu sampai login modal benar-benar tertutup, baru buka register modal
+      loginModal._isShown = false;  // Set login modal state to closed
+      var registerModal = new bootstrap.Modal(document.getElementById('registerForm'));
+      registerModal.show(); // Show Register Modal
+    }
+
+    // Function to show Login Form and hide Register Form
+    function showLoginForm() {
+      var registerModal = new bootstrap.Modal(document.getElementById('registerForm'));
+      registerModal.hide(); // Close Register Modal
+
+      // Menunggu sampai register modal benar-benar tertutup, baru buka login modal
+      registerModal._isShown = false;  // Set register modal state to closed
+      var loginModal = new bootstrap.Modal(document.getElementById('loginForm'));
+      loginModal.show(); // Show Login Modal
+    }
+  </script>
+</body>
+
+</html>
